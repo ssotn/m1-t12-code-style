@@ -1,12 +1,12 @@
-import java.util.Scanner;
+import java.util.Scanner;//убрали лишние иморты, огонь!
 
 public class DepositCalculator {
-    double calculateComplexPercent(double amount, double percentValue, int depositPeriod) {
+    double calculateComplexPercent(double amount, double percentValue, int depositPeriod) {//с пробелами вроде всё ок
         double profit = amount * Math.pow((1 + percentValue / 12), 12 * depositPeriod);
         return round(profit, 2);
     }
 
-    double calculateSimplePercent(double amount, double percentValue, int depositPeriod) {
+    double calculateSimplePercent(double amount, double percentValue, int depositPeriod) {//с пустыми строчками между методами тоже
         return round(amount + amount * percentValue * depositPeriod, 2);
     }
 
@@ -15,7 +15,7 @@ public class DepositCalculator {
         return Math.round(amountWithProfit * ScaLe) / ScaLe;
     }
 
-    void calculateDepositProfit() {
+    void calculateDepositProfit() {//и названия методов, переменныч значимые
         int depositPeriod;
         int userAction;
         double amountWithProfit = 0;
@@ -37,7 +37,7 @@ public class DepositCalculator {
                 + amountWithProfit);
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {//не вижу недочётов. Огонь!
         new DepositCalculator().calculateDepositProfit();
     }
 }
